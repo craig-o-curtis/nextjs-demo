@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import AnchorLink from '../components/AnchorLink';
+import Image from 'next/image';
 
-interface HomeProps {}
-
-export default function Home(props: HomeProps): JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <div className={styles?.container}>
       <Head>
@@ -12,12 +12,10 @@ export default function Home(props: HomeProps): JSX.Element {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Learn <a href="https://nextjs.org">Next.tsx!</a>
-        </h1>
+        <h1 className={styles.title}>Blog App</h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          Read the <AnchorLink path="/posts/first-post" text="First Post" />.
         </p>
 
         <div className={styles.grid}>
@@ -58,7 +56,7 @@ export default function Home(props: HomeProps): JSX.Element {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          <Image src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
 
@@ -113,5 +111,5 @@ export default function Home(props: HomeProps): JSX.Element {
         }
       `}</style>
     </div>
-  )
+  );
 }
