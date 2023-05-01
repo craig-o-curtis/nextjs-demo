@@ -1,7 +1,7 @@
-import Script from 'next/script';
 import PageHead from '../../components/PageHead';
 import AnchorLink from '../../components/AnchorLink';
 import CustomScript from '../../components/CustomScript';
+import { Button } from '@chakra-ui/react';
 
 export default function FirstPost() {
   return (
@@ -17,6 +17,7 @@ export default function FirstPost() {
 
       <h1>First Post</h1>
       <AnchorLink />
+      <Button colorScheme="teal">I do nothing</Button>
     </>
   );
 }
