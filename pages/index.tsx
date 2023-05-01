@@ -56,7 +56,13 @@ export default function Home(): JSX.Element {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          <Image
+            src="/vercel.svg"
+            alt="Vercel"
+            width="100"
+            height="100"
+            className={styles.logo}
+          />
         </a>
       </footer>
 
