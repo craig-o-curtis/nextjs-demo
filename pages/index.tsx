@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+interface HomeProps {}
+
+export default function Home(props: HomeProps): JSX.Element {
   return (
-    <div className={styles.container}>
+    <div className={styles?.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -11,7 +13,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <a href="https://nextjs.org">Next.tsx!</a>
         </h1>
 
         <p className={styles.description}>
