@@ -1,70 +1,28 @@
-import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import AnchorLink from '../components/AnchorLink';
-import Image from 'next/image';
+import ProfilePic from '../components/ProfilePic';
+import PageHead from '../components/PageHead';
 
 export default function Home(): JSX.Element {
   return (
     <div className={styles?.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHead title="Blog App" />
 
       <main>
         <h1 className={styles.title}>Blog App</h1>
+        <ProfilePic />
 
-        <p className={styles.description}>
-          Read the <AnchorLink path="/posts/first-post" text="First Post" />.
-        </p>
+        <p className={styles.description}>Read the blogs.</p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.card}>
+            <h3>Blog 1 &rarr;</h3>
+            <AnchorLink path="/posts/first-post" text="First Post" />
+          </div>
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image
-            src="/vercel.svg"
-            alt="Vercel"
-            width="100"
-            height="100"
-            className={styles.logo}
-          />
-        </a>
-      </footer>
+      <footer>Footer</footer>
 
       <style jsx>{`
         main {
