@@ -5,7 +5,7 @@ module.exports = (_phase, { defaultConfig }) => {
    */
   const nextConfig = {
     /* config options here */
-    appDir: true,
+    // appDir: true, // doesn't work
   };
   return nextConfig;
 };

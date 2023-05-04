@@ -1,12 +1,11 @@
-import PageHead from '../../components/PageHead';
 import AnchorLink from '../../components/AnchorLink';
 import CustomScript from '../../components/CustomScript';
-import { Button } from '@chakra-ui/react';
+import { Button, Flex, Heading } from '@chakra-ui/react';
+import Layout from '../../components/Layout';
 
 export default function FirstPost() {
   return (
-    <>
-      <PageHead title="First Post"></PageHead>
+    <Layout>
       <CustomScript
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
@@ -15,9 +14,13 @@ export default function FirstPost() {
         }
       />
 
-      <h1>First Post</h1>
+      <Heading as="h1" mb="6">
+        First Post
+      </Heading>
       <AnchorLink />
-      <Button colorScheme="teal">I do nothing</Button>
-    </>
+      <Flex>
+        <Button colorScheme="teal">I do nothing</Button>
+      </Flex>
+    </Layout>
   );
 }
