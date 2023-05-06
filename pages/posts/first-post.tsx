@@ -19,7 +19,7 @@ export default function FirstPost() {
       </Heading>
       <AnchorLink />
       <Flex>
-        <Button colorScheme="teal">I do nothing</Button>
+        <Button>I do nothing</Button>
       </Flex>
     </Layout>
   );

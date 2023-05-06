@@ -3,7 +3,7 @@ import utilStyles from '../styles/utils.module.css';
 import ProfilePic from './ProfilePic';
 import { Link } from '@chakra-ui/next-js';
 
-const name = 'Your Name';
+const name = 'craig-o-curtis';
 
 interface PageHeaderProps {
   home?: boolean;

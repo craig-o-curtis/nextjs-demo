@@ -31,3 +31,6 @@ yarn-error.log*
 
 # next typescript
 next-env.d.ts
+
+# IDE
+.vscode/*
