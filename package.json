@@ -13,11 +13,14 @@
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "clsx": "^1.2.1",
+    "date-fns": "^2.30.0",
     "framer-motion": "^10.12.4",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.3.2",

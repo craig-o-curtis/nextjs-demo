@@ -1,18 +1,18 @@
-import styles from './Layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import ProfilePic from './ProfilePic';
 import { Link } from '@chakra-ui/next-js';
+import { useRouter } from 'next/router';
+import styles from './Layout.module.css';
 
 const name = 'craig-o-curtis';
 
-interface PageHeaderProps {
-  home?: boolean;
-}
+export default function PageHeader() {
+  const router = useRouter();
+  const onIndex = router.pathname === '/' || router.route === '/';
 
-export default function PageHeader({ home }: PageHeaderProps) {
   return (
     <header className={styles.header}>
-      {home ? (
+      {onIndex ? (
         <>
           <ProfilePic
             height={144}

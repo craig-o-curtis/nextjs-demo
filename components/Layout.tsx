@@ -3,24 +3,26 @@ import PageHead from './PageHead';
 import PageHeader from './PageHeader';
 
 interface LayoutProps {
-  home?: boolean;
+  title?: string;
   children?: React.ReactNode;
 }
 
-export default function Layout({ home = false, children }: LayoutProps) {
+export default function Layout({ title, children }: LayoutProps) {
   const pageBg = useColorModeValue('gray.100', 'gray.900');
   return (
-    <Box maxW="36rem" p="1rem" m="3rem auto 6rem">
-      <PageHead title="TODO dynamic title" />
-      <PageHeader home={home} />
-      <Flex
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        background={pageBg}
-      >
-        <main>{children}</main>
-      </Flex>
+    <Box>
+      <PageHead title={title} />
+      <Box maxW="36rem" p="1rem" m="3rem auto 6rem">
+        <PageHeader />
+        <Flex
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          background={pageBg}
+        >
+          <main>{children}</main>
+        </Flex>
+      </Box>
     </Box>
   );
 }
