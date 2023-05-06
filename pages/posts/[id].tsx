@@ -16,6 +16,7 @@ export default function Post({ id, title, date, contentHtml }: PostProps) {
         <Divider my={3} />
         <PostMeta id={id} date={date} />
         <Divider my={3} />
+        {/* Not ideal at all, should use mdx, but just a demo */}
         <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </Box>
     </Layout>
