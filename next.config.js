@@ -23,6 +23,15 @@ module.exports = (_phase, { defaultConfig }) => {
         },
       ];
     },
+    // example writing robots to api folder
+    async rewrites() {
+      return [
+        {
+          source: '/robots.txt',
+          destination: '/api/robots',
+        },
+      ];
+    },
   };
   return nextConfig;
 };
