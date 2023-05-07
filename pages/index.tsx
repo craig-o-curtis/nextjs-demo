@@ -1,5 +1,6 @@
 import AnchorLink from '../components/AnchorLink';
 import {
+  Alert,
   Box,
   Divider,
   Heading,
@@ -43,6 +44,10 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
         <p>
           Redirect example:{' '}
           <AnchorLink path="/redirect" text="Redirects to /" />
+          <p>
+            <strong>Note: </strong> broken in build, changing redirect.index to
+            txt file
+          </p>
         </p>
         <Divider my="1" />
         <p>
