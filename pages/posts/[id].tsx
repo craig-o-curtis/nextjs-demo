@@ -24,8 +24,12 @@ export default function Post({ id, title, date, contentHtml }: PostProps) {
 }
 
 // Build out all possible paths
-export async function getStaticPaths() {
+export async function getStaticPaths(localeObj: {
+  locales: string[];
+  defaultLocale: string;
+}) {
   // Return a list of possible value for id
+  console.log('getStaticPaths passes localeObj', localeObj);
   const paths: { params: { id: string } }[] = getAllPostIds();
   return {
     paths,
