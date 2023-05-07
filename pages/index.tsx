@@ -40,15 +40,7 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
           Hello tailwind!
         </Heading>
         <Divider my="1" />
-        <p>
-          Redirect example:{' '}
-          <AnchorLink path="/redirect" text="Redirects to /" />
-          <p>
-            <strong>Note: </strong> broken in build, changing redirect.index to
-            txt file
-          </p>
-        </p>
-        <Divider my="1" />
+
         <p>
           Custom 404 example: <AnchorLink path="/404" text="404 page" />
         </p>
