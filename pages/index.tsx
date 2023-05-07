@@ -39,6 +39,33 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
         <Heading className="text-3xl font-bold underline">
           Hello tailwind!
         </Heading>
+        <Divider my="1" />
+        <p>
+          Redirect example:{' '}
+          <AnchorLink path="/redirect" text="Redirects to /" />
+        </p>
+        <Divider my="1" />
+        <p>
+          Custom 404 example: <AnchorLink path="/404" text="404 page" />
+        </p>
+        <Divider my="1" />
+        <p>
+          Manual 404 example:{' '}
+          <AnchorLink path="/manual404" text="Redirects to 404" />
+        </p>
+        <Divider my="1" />
+        <p>
+          Custom 410 example: <AnchorLink path="/410" text="410 page" />
+        </p>
+        <Divider my="1" />
+        <p>
+          Custom 500 example: <AnchorLink path="/500" text="500 page" />
+        </p>
+        <Divider my="1" />
+        <p>
+          Custom 503 example: <AnchorLink path="/503" text="503 page" />
+        </p>
+        <Divider my="1" />
         <p className="text-slate-700 dark:text-slate-500">
           All about some blog stuff
         </p>
