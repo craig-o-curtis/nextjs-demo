@@ -1,6 +1,5 @@
 import AnchorLink from '../components/AnchorLink';
 import {
-  Alert,
   Box,
   Divider,
   Heading,
