@@ -3,6 +3,7 @@ import ProfilePic from './ProfilePic';
 import { Link } from '@chakra-ui/next-js';
 import { useRouter } from 'next/router';
 import styles from './Layout.module.css';
+import { Heading } from '@chakra-ui/react';
 
 const name = 'next.js demo';
 
@@ -20,7 +21,9 @@ export default function PageHeader() {
             className={utilStyles.borderCircle}
           />
 
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <Heading as="h1" className={utilStyles.heading2Xl}>
+            {name}
+          </Heading>
         </>
       ) : (
         <>
@@ -31,11 +34,11 @@ export default function PageHeader() {
               width={108}
             />
           </Link>
-          <h2 className={utilStyles.headingLg}>
+          <Heading as="h2" className={utilStyles.headingLg}>
             <Link href="/" className={utilStyles.colorInherit}>
               {name}
             </Link>
-          </h2>
+          </Heading>
         </>
       )}
     </header>

@@ -16,6 +16,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData, Post } from '../lib/posts';
 import { Fragment } from 'react';
 import PostMeta from '../components/PostMeta';
+import StyledLink from '../components/StyledLink';
 
 interface IndexPage {
   allPostsData: Post[];
@@ -40,7 +41,6 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
           Hello tailwind!
         </Heading>
         <Divider my="1" />
-
         <p>
           Custom 404 example: <AnchorLink path="/404" text="404 page" />
         </p>
@@ -61,6 +61,9 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
         <p>
           Custom 503 example: <AnchorLink path="/503" text="503 page" />
         </p>
+        <Divider my="1" />
+        Example Styled component link{' '}
+        <StyledLink href="/posts/ssg-ssr" name="hard-coded first post" />
         <Divider my="1" />
         <p className="text-slate-700 dark:text-slate-500">
           All about some blog stuff

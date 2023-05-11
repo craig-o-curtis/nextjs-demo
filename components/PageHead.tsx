@@ -27,7 +27,7 @@ export default function PageHead({
       <meta name="google" content="nositelinkssearchbox" key="sitelinks" />
       {/* do not offer google translate */}
       <meta name="google" content="notranslate" key="notranslate" />
-      {/* og used for social media */}
+      {/* open graph og used for social media */}
       <meta name="og:title" content={title} />
       <meta name="og:description" content="Demo lesson from Next.js tutorial" />
       <meta
