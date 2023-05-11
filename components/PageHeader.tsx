@@ -4,7 +4,7 @@ import { Link } from '@chakra-ui/next-js';
 import { useRouter } from 'next/router';
 import styles from './Layout.module.css';
 
-const name = 'craig-o-curtis';
+const name = 'next.js demo';
 
 export default function PageHeader() {
   const router = useRouter();
