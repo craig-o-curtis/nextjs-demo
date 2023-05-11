@@ -31,9 +31,11 @@ export async function getStaticPaths(localeObj: {
   // Return a list of possible value for id
   console.log('getStaticPaths passes localeObj', localeObj);
   const paths: { params: { id: string } }[] = getAllPostIds();
+
   return {
     paths,
     fallback: false, // any paths not returned will get 404
+    // fallback: 'blocking', // any new post added post build will SSR to ensure SEO. It will then be static for all subsequent requests
   };
 }
 
@@ -46,3 +48,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: { ...postData },
   };
 };
+
+// SSR example:
+// export async function getServerSideProps({ query }) {
+//   const res = await fetch(`https://www.example.com/api/blog/${query.slug}`);
+//   const data = await res.json();
+
+//   return {
+//     props: {
+//       blog: data,
+//     },
+//   };
+// }
