@@ -12,7 +12,7 @@ export default function Post({ id, title, date, contentHtml }: PostProps) {
   return (
     <Layout title={title}>
       <Box p="3">
-        <Heading>{title}</Heading>
+        <Heading as="h1">{title}</Heading>
         <Divider my={3} />
         <PostMeta id={id} date={date} />
         <Divider my={3} />
