@@ -7,11 +7,11 @@ module.exports = (_phase, { defaultConfig }) => {
     /* config options here */
     // appDir: true, // doesn't work
     ...defaultConfig,
-    // fix FOUC css flicker on route change, requires critters npm pkg
-    // doesn't work on dev mode
-    experimental: {
-      optimizeCss: true,
-    },
+
+    // turn off for turbo
+    // experimental: {
+    //   optimizeCss: true,
+    // },
 
     // route-based redirects
     async redirects() {
