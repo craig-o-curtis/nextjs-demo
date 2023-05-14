@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   useColorModeValue,
+  Text,
 } from '@chakra-ui/react';
 import DarkModeToggle from '../components/DarkModeToggle';
 import CustomScript from '../components/CustomScript';
@@ -41,26 +42,26 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
           Hello tailwind!
         </Heading>
         <Divider my="1" />
-        <p>
+        <Text>
           Custom 404 example: <AnchorLink path="/404" text="404 page" />
-        </p>
+        </Text>
         <Divider my="1" />
-        <p>
+        <Text>
           Manual 404 example:{' '}
           <AnchorLink path="/manual404" text="Redirects to 404" />
-        </p>
+        </Text>
         <Divider my="1" />
-        <p>
+        <Text>
           Custom 410 example: <AnchorLink path="/410" text="410 page" />
-        </p>
+        </Text>
         <Divider my="1" />
-        <p>
+        <Text>
           Custom 500 example: <AnchorLink path="/500" text="500 page" />
-        </p>
+        </Text>
         <Divider my="1" />
-        <p>
+        <Text>
           Custom 503 example: <AnchorLink path="/503" text="503 page" />
-        </p>
+        </Text>
         <Divider my="1" />
         Example Styled component link{' '}
         <StyledLink href="/posts/ssg-ssr" name="hard-coded first post" />
