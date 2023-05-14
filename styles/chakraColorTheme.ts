@@ -8,6 +8,10 @@ export const customTheme = extendTheme({
     primary: baseTheme.colors.blue,
     secondary: baseTheme.colors.orange,
   },
+  fonts: {
+    heading: `'Open Sans', sans-serif`,
+    body: `'Raleway', sans-serif`,
+  },
   components: {
     Button: {
       defaultProps: {

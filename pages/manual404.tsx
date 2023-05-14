@@ -1,4 +1,4 @@
-import { Box, Heading, Code } from '@chakra-ui/react';
+import { Box, Heading, Text, Code } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 import PageHead from '../components/PageHead';
 
@@ -15,7 +15,7 @@ export default function Custom404() {
       <Box p={10}>
         <Heading as="h2">Manual 404</Heading>
         <Heading as="h3">Page Not Found</Heading>
-        <p>Use getStaticProps</p>
+        <Text>Use getStaticProps</Text>
         <Code
           // eslint-disable-next-line react/no-children-prop
           children={`
