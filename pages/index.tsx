@@ -81,6 +81,11 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
           </Fragment>
         ))}
       </List>
+      <Divider my="1" />
+      <Box>
+        <Heading as="h3">Lazy Loading: Countries Search</Heading>
+        <AnchorLink path="/countries-search" text="Countries Search" />
+      </Box>
     </Layout>
   );
 }
