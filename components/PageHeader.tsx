@@ -35,9 +35,7 @@ export default function PageHeader() {
             />
           </Link>
           <Heading as="h2" className={utilStyles.headingLg}>
-            <Link href="/" className={utilStyles.colorInherit}>
-              {name}
-            </Link>
+            <Link href="/">{name}</Link>
           </Heading>
         </>
       )}

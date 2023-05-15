@@ -1,6 +1,7 @@
 // import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 import { ReactNode } from 'react';
 import Head from 'next/head';
+import CustomScript from './CustomScript';
 
 export interface PageHeadProps {
   title?: string;
@@ -38,6 +39,12 @@ export default function PageHead({
       />
       <meta name="twitter:card" content="summary_large_image" />
       {children ? children : null}
+      <CustomScript
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=123"
+        onLoad={() => console.info('google tag manager loaded')}
+        onError={(e) => console.error('google tag manager failed to load', e)}
+      />
     </Head>
   );
 }
