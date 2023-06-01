@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { Box, Heading, Text, Code } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 import PageHead from '../components/PageHead';
@@ -32,8 +33,8 @@ export default function Custom404() {
 }
 
 // manual way to set
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function getStaticProps(context: never) {
+export async function getStaticProps(props: GetStaticProps) {
+  console.log('props', props);
   return {
     notFound: true, // triggers 404
     // props: {},
