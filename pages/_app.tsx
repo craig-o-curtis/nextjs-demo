@@ -1,5 +1,6 @@
 // pages/_app.js
-import type { AppProps } from 'next/app';
+
+import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
 // global styles here
@@ -27,4 +28,8 @@ export async function getStaticProps() {
   return {
     props: swapiData,
   };
+}
+
+export function reportWebVitals(metric: NextWebVitalsMetric): void {
+  console.log('metric', metric);
 }
