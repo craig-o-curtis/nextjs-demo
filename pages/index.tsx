@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import AnchorLink from '../components/AnchorLink';
 import {
   Box,
@@ -91,12 +92,13 @@ export default function IndexPage({ allPostsData }: IndexPage): JSX.Element {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(props: GetStaticProps) {
   // filesystem md files
   const allPostsData = getSortedPostsData();
   // api stuff
   const starWarsGuysRaw = await fetch('https://swapi.dev/api//people/1/');
   const starWarsGuys = await starWarsGuysRaw.json();
+  console.log('props', props);
 
   return {
     props: {

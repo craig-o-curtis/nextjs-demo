@@ -1,5 +1,5 @@
 // pages/_app.js
-
+import { GetStaticProps } from 'next';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -21,9 +21,10 @@ export default function App({ Component, pageProps }: MyAppProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(props: GetStaticProps) {
   const swapiData = await fetch('https://swapi.dev/api//people/1/');
   console.log('swapiData', swapiData);
+  console.log('props', props);
 
   return {
     props: swapiData,

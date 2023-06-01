@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetStaticPaths /*GetServerSideProps*/ } from 'next';
 import { Box, Heading, Divider } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
@@ -24,10 +24,7 @@ export default function Post({ id, title, date, contentHtml }: PostProps) {
 }
 
 // Build out all possible paths
-export async function getStaticPaths(localeObj: {
-  locales: string[];
-  defaultLocale: string;
-}) {
+export async function getStaticPaths(localeObj: GetStaticPaths) {
   // Return a list of possible value for id
   console.log('getStaticPaths passes localeObj', localeObj);
   const paths: { params: { id: string } }[] = getAllPostIds();
@@ -50,7 +47,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 // SSR example:
-// export async function getServerSideProps({ query }) {
+// export async function getServerSideProps({ query }: GetServerSideProps) {
 //   const res = await fetch(`https://www.example.com/api/blog/${query.slug}`);
 //   const data = await res.json();
 
